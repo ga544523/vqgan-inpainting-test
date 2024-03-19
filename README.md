@@ -15,3 +15,10 @@
 
 512x512縮放到800x600 n_embed 65536
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/demo1.gif?raw=true)
+
+## 訓練
+
+
+
+
+## 測試
