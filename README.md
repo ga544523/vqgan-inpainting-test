@@ -17,8 +17,22 @@
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/demo1.gif?raw=true)
 
 ## 訓練
+與原版基本相同
 
+訓練影像位置
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/2.png?raw=true)
 
+每張影像位置存入txt檔 命名為train.txt
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/1.png?raw=true)
+
+custom_vqgan.yaml參數設定
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/3.png?raw=true)
+
+運行產生的mask可透過base.py裡的 RandomIrregularMaskGenerator進行調整
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/4.png?raw=true)
 
 
 ## 測試
+
+推論後儲存的圖片
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/6.png?raw=true)
