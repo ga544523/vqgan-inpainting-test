@@ -25,14 +25,36 @@
 每張影像位置存入txt檔 命名為train.txt
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/1.png?raw=true)
 
-custom_vqgan.yaml參數設定
+configs/custom_vqgan.yaml參數設定
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/3.png?raw=true)
 
-運行產生的mask可透過base.py裡的 RandomIrregularMaskGenerator進行調整
+taming/data/base.py參數設定（siz影像大小,）
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/8.png?raw=true)
+
+RandomIrregularMaskGenerator (mask大小調整) 來自<https://github.com/advimman/lama>
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/9.png?raw=true)
+
+main.py裡infer改為0
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/7.png?raw=true)
+
+運行python main.py --base configs/custom_vqgan.yaml -t True --gpus 0,   (需要逗號)
+
+logs裡產生的mask圖片
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/4.png?raw=true)
 
 
 ## 測試
+讀取訓練後的ckpt
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/11.png?raw=true)
+
+推論圖片 影像跟mask配對
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/5.png?raw=true)
+
+main.py裡infer改為1 
+運行python main.py --base configs/custom_vqgan.yaml -t True --gpus 0,   (需要逗號)
+
+執行底下的infer程式
+![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/10.png?raw=true)
 
 推論後儲存的圖片
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/6.png?raw=true)
