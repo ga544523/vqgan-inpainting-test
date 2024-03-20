@@ -19,7 +19,7 @@
 ## 訓練
 與原版基本相同
 
-訓練影像位置
+存好訓練圖片
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/2.png?raw=true)
 
 每張影像位置存入txt檔 命名為train.txt
@@ -44,6 +44,7 @@ logs裡產生的mask圖片
 
 
 ## 測試
+(main.py裡的infer是測試時的代碼)
 讀取訓練後的ckpt
 ![image](https://github.com/ga544523/vqgan-inpainting-test/blob/main/example/11.png?raw=true)
 
